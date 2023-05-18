@@ -7,5 +7,24 @@ Course |Lists
 {% block content %}
 <div class="container">
     <h1>This is Course List Page </h1>
+    <a href="{% url 'course-create' %}" class="btn btn-primary btn-sm smt-3 mb-3">Add New Courses</a>
+    <table class="table" table-hover>
+        <thead>
+            <tr>
+                <th>S.No</th>
+                <th>Course Name</th>
+                <th colspan="3">Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>Python With Django</td>
+                <td><a href="{% url 'course-show' %}" class="btn btn-primary btn-sm mt-3 mb-2">Show</a></td>
+                <td><a href="{% url 'course-edit' %}" class="btn btn-primary btn-sm mt-3 mb-2">Edit</a></td>
+                <td><a href="{% url 'course-delect' %}" class="btn btn-primary btn-sm mt-3 mb-2">Delect</a></td>
+            </tr>
+        </tbody>
+    </table>
 </div>
 {% endblock %}
